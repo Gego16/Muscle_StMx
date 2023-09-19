@@ -1,0 +1,541 @@
+:root{
+    --fondoPrincipal : #000000;
+    --fondoSecundario: #677381;
+    --fondoTerciario: #82A0AA;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --just-white: #ffffff;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+header h1{
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.image-principal{
+  width: 100%;
+  min-width: 320px;
+  height: 260px;
+  background-image: url('../logos/confondo.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size:x-large;
+  font-weight: 500;
+  padding: 0;
+}
+#menu {
+  position: absolute;
+  top: 0;
+  width: 260px;
+  height:100%;
+  background-color: #D1D1D1;
+  transition: left 0.4s ease;
+  z-index: 9999;
+}
+
+#menu ul {
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li {
+  padding: 15px;
+}
+
+#menu li a {
+  color: black;
+  text-decoration:none;
+  font-family: 'Roboto' sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* Estilos adicionales para el menú */
+#menu.active .close-btn {
+  display: block; /* Muestra el botón de cierre cuando el menú está activo */
+}
+
+header .btn-productos{
+  position: absolute;
+  left: calc(50% - 118px);
+  top: 270px;
+  display: block;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: var(--off-white);
+  /* sombra */
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.main-container {
+  display: flex;
+  height: 330px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.main-container .product img{
+  display: flex;
+  position: relative;
+  height: 150px;
+  width: 120px;
+  top: 100px;
+}
+
+.main-container .product-vitamins img{
+  display: flex;
+  position: relative;
+  height: 150px;
+  width: 90px;
+  top: 100px;
+}
+
+.main-container .product-vitamins{
+  scroll-snap-align: center;
+  width: 40%;
+  min-width: 190px;
+  max-width: 300px;
+  height: 300px;
+  margin: -10px 10px 0;
+  padding: 0 20px;
+  border-radius: 15px; 
+  margin-top: -64px;
+
+}
+
+.main-container .product {
+  scroll-snap-align: center;
+  width: 40%;
+  min-width: 190px;
+  max-width: 300px;
+  height: 300px;
+  margin: -10px 10px 0;
+  padding: 0 20px;
+  border-radius: 15px; 
+  margin-top: -64px;
+}
+.main-container .product .name{
+  position: relative;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 73px);
+  top: 97px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.main-container .product-vitamins .name{
+  position: relative;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 88px);
+  top: 97px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.main-container .product .description{
+  position: relative;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 73px);
+  top: 83px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.main-container .product-vitamins .description{
+  position: relative;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 85px);
+  top: 83px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.main-container .product .cost{
+  position: relative;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 73px);
+  top: 70px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.main-container .product-vitamins .cost{
+  position: relative;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 90px);
+  top: 70px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+ 
+main .btn-verMas{
+  position: absolute;
+  left: calc(50% - 93px);
+  top: 558px;
+  display: block;
+  padding: 15px;
+  width: 200px;
+  height: 48px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 10px 10px 8px rgb(0 0 0 / 50%);
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.main-two{
+  position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background: var(--warm-black);
+}
+.image-two{
+  width: 100%;
+  min-width: 320px;
+  height: 75px;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-two p{
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  font-size: 2.4rem;
+  text-align: center;
+  border-top: 25px;
+}
+.main-container-new {
+  display: flex;
+  height: 265px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+.main-container-new .product-new {
+  scroll-snap-align: center;
+    width: 40%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 268px;
+    margin: -15px 10px 0;
+    padding: 0 20px;
+    border-radius: 15px;
+}
+
+.main-container-new .product-new img{
+    display: flex;
+    position: relative;
+    height: 150px;
+    width: 120px;
+    top: 31px;
+    margin-left: 7px;
+}
+
+.main-container-new .product-new .name{
+  position: relative;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 83px);
+  top: 31px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.main-container-new .product-new .description{
+  position: relative;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 84px);
+  top: 18px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.main-container-new .product-new .cost{
+  position: relative;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  left: calc(50% - 88px);
+  top: 8px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+.btn-verMas-nuevo{
+  position: absolute;
+  left: calc(50% - 93px);
+  top: -22px;
+  display: block;
+  padding: 15px;
+  width: 200px;
+  height: 48px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 8px -7px 11px rgb(0 0 0 / 50%);
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.main-product-detail{
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background: var(--warm-black);
+}
+
+.product-detail--title{
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.product-detail--title h2{
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.4rem;
+  color: var(--just-white) ;
+}
+
+.product-detail--title p{
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+.product-detail--card{
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: 150px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: var(--black);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.16);
+}
+.product-detail--card .clock{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-image: url('./assets/icons/clock.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product--card-title{
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--just-white);
+}
+.product--card-body{
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+.product-detail--card .diner{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-image: url('./assets/icons/dollar-sign.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-detail--card .check{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+  background-image: url('./assets/icons/check-circle.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sucursales{
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+}
+
+.sucursales-title{
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.4rem;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sucursales-ubicacion{
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: 150px;
+  margin: 15px auto;
+  padding: 15px;
+}
+
+.sucursales-ubicacion h3{
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+}
+
+.sucursales-ubicacion p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.sucursales span{
+  background-image: url(../logos/ubicacion.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  margin-left: 168px;
+  margin-top: -67px;
+}
+
+.sucursales a{
+  text-decoration: none;
+  color: black;
+  font-family: 'Roboto',sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+footer .container-mision{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: 70vh;
+    padding: 20px 10px;
+    background: var(--warm-black);
+}
+
+.container-mision .tarjeta{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-mision h1{
+  font-size: 2.5rem;
+  color: var(--just-white);
+  text-align: center;
+}
+
+.container-mision p{
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: justify;
+  color: #808080;
+}

@@ -1,0 +1,148 @@
+:root{
+    --fondoPrincipal : #000000;
+    --fondoSecundario: #677381;
+    --fondoTerciario: #82A0AA;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --just-white: #ffffff;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%;
+  font-family: 'DM Sans', sans-serif;
+}
+.imagen-principal{
+  width: 100%;
+  min-width: 320px;
+  height: 260px;
+  background-image: url('../logos/confondo.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size:x-large;
+  font-weight: 500;
+  padding: 0;
+}
+#menu {
+  position: absolute;
+  top: 0;
+  width: 260px;
+  height:100%;
+  background-color: #D1D1D1;
+  transition: left 0.4s ease;
+  z-index: 9999;
+}
+
+#menu ul {
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu li {
+  padding: 15px;
+}
+
+#menu li a {
+  color: black;
+  text-decoration:none;
+  font-family: 'Roboto' sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* Estilos adicionales para el menú */
+#menu.active .close-btn {
+  display: block; /* Muestra el botón de cierre cuando el menú está activo */
+}
+
+header .btn-productos{
+  position: absolute;
+  left: calc(50% - 118px);
+  top: 270px;
+  display: block;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background-color: var(--off-white);
+  /* sombra */
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  color: var(--black);
+}
+
+main{
+    overflow-y: auto; /* Habilita el desplazamiento vertical cuando sea necesario */
+    min-height: 85vh; /* Establece una altura mínima igual a la altura del viewport */
+}
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  margin-top: 20px;
+}
+
+.producto .imagen-producto{
+  width: 229px;
+  height: 260px;
+}
+
+.producto .nombre{
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+}
+.producto .precio{
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.producto .sabores{
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.producto .descripcion{
+  margin-top: 10px;
+  text-align: justify;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding: 20px;
+}
